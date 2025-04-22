@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Dropdowns and Accordions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+  <h2 class="w3-center w3-blue"> Fun Facts About Volleyball</h2>
+  </div>
+  <!-- Question #1 - regular answer-->
+<!-- create a container for an accordion style button -->
+<div class="w3-container w3-auto">
+
+<!-- accordion style button, only change color-->
+<button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-red w3-left-align "
+style="width: 50%">1. How do you win? &#9660;</button>
+<!-- div for the answer that will drop down once a button is clicked -->
+<div id="Demo1" class="w3-container w3-hide">
+  <h4>You beat the opponent in a best out of 3 or 5 in sets </h4>
+</div> <!--end of answer div-->
+
+</div> <!-- closing <div> for an accordion style button -->
+<!-- add breaks as needed for space between buttons -->
+<br>
+<br>
+<!-- repeat the code two or three times for additional questions-->
+<div class="w3-container w3-auto">
+
+<!-- accordion style button, only change color-->
+<button onclick="myFunction('Demo2')" class="w3-btn w3-block w3-green w3-left-align "
+style="width: 50%">2. When was volleyball invented? &#9660;</button>
+<!-- div for the answer that will drop down once a button is clicked -->
+<div id="Demo2" class="w3-container w3-hide">
+    <h4>1895</h4>
+</div> <!--end of answer div-->
+
+</div> <!-- closing <div> for an accordion style button -->
+<!-- add breaks as needed for space between buttons -->
+<br>
+<br>
+
+<div class="w3-container w3-auto">
+
+<!-- accordion style button, only change color-->
+<button onclick="myFunction('Demo3')" class="w3-btn w3-block w3-black w3-left-align "
+style="width: 50%">3. Who invented volleyball? &#9660;</button>
+<!-- div for the answer that will drop down once a button is clicked -->
+<div id="Demo3" class="w3-container w3-hide">
+    <h4>William G. Morgan</h4>
+</div> <!--end of answer div-->
+
+</div> <!-- closing <div> for an accordion style button -->
+<!-- add breaks as needed for space between buttons -->
+<br>
+<br>
+
+<div class="w3-container w3-auto">
+
+<!-- accordion style button, only change color-->
+<button onclick="myFunction('Demo4')" class="w3-btn w3-block w3-red w3-left-align "
+style="width: 50%">4. What is the hardest position in volleyball? &#9660;</button>
+<!-- div for the answer that will drop down once a button is clicked -->
+<div id="Demo4" class="w3-container w3-hide">
+    <h4>highly debated but most commonly know to be setter or middle</h4>
+</div> <!--end of answer div-->
+
+</div> <!-- closing <div> for an accordion style button -->
+<!-- add breaks as needed for space between buttons -->
+<br>
+<br>
+
+<div class="w3-container w3-auto">
+
+<!-- accordion style button, only change color-->
+<button onclick="myFunction('Demo5')" class="w3-btn w3-block w3-green w3-left-align "
+style="width: 50%">5. How many poeple can be on the court at once? &#9660;</button>
+<!-- div for the answer that will drop down once a button is clicked -->
+<div id="Demo5" class="w3-container w3-hide">
+    <h4>6 people</h4>
+</div> <!--end of answer div-->
+
+</div> <!-- closing <div> for an accordion style button -->
+<!-- add breaks as needed for space between buttons -->
+<br>
+<br>
+<!-- footer with your name on it -->
+
+<div class="w3-center w3-blue">
+    <footer> Chase Gestring </footer>
+</div>
+
+<!-- DO NOT CHANGE THE SCRIPT -->
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+</script>
+</body>
+</html>
