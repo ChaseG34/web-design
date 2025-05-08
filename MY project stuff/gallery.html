@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gallery | WanderWise</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- W3.CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: "Segoe UI", sans-serif; }
+    .theme-color { background-color: #f0f8ff; color: #333; }
+    .nav-bar { background-color: #0275d8; }
+    .nav-bar a:hover { background-color: #025aa5 !important; }
+    .gallery-img { width: 100%; height: auto; }
+  </style>
+</head>
+<body class="theme-color">
+
+  <!-- Navigation -->
+  <div class="w3-bar nav-bar w3-padding">
+    <a href="MyProject.html" class="w3-bar-item w3-button">Home</a>
+    <a href="desinations.html" class="w3-bar-item w3-button">Destinations</a>
+    <a href="food.html" class="w3-bar-item w3-button">Food</a>
+    <a href="tips.html" class="w3-bar-item w3-button">Travel Tips</a>
+    <a href="gallery.html" class="w3-bar-item w3-button w3-white">Gallery</a>
+  </div>
+
+  <div class="w3-content w3-padding" style="max-width:1000px">
+    <h2 class="w3-center w3-padding-16"><i class="fas fa-images"></i> Travel Gallery</h2>
+
+    <!-- Video Section -->
+    <div class="w3-container w3-margin-bottom">
+      <h3> Travel Video</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3SsK-cxlj_w?si=4s-mit1-J-L1Jzax" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </video>
+    </div>
+
+    <!-- Slideshow Section -->
+    <div class="w3-container w3-margin-bottom">
+      <h3><i class="fa fa-slideshow"></i> Slideshow</h3>
+      <div class="w3-content w3-display-container" style="max-width:800px">
+
+        <!-- 🟩 Replace these images with your own -->
+        <img class="mySlides" src="Beach.jpg" style="width:100%">
+        <img class="mySlides" src="bridge.jpg" style="width:100%">
+        <img class="mySlides" src="cold.jpg" style="width:100%">
+        <img class="mySlides" src="red.jpg" style="width:100%">
+        <img class="mySlides" src="sky.jpg" style="width:100%">
+
+        <!-- Slideshow controls -->
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- Static Image Gallery -->
+    <div class="w3-row-padding w3-margin-top">
+      <div class="w3-third w3-margin-bottom">
+        <img src="images/gallery1.jpg" alt="Gallery 1" class="gallery-img w3-card-2">
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <img src="images/gallery2.jpg" alt="Gallery 2" class="gallery-img w3-card-2">
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <img src="images/gallery3.jpg" alt="Gallery 3" class="gallery-img w3-card-2">
+      </div>
+    </div>
+
+    <!-- Optional Caption -->
+    <div class="w3-container w3-center w3-padding-16">
+      <p>[Optional: Caption or description of your gallery content]</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-padding-16">
+    <p>© 2025 WanderWise Travel Guide</p>
+  </footer>
+
+  <!-- Slideshow Script -->
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
