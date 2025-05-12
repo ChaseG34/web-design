@@ -25,6 +25,7 @@
     <a href="food.html" class="w3-bar-item w3-button">Food</a>
     <a href="tips.html" class="w3-bar-item w3-button">Travel Tips</a>
     <a href="gallery.html" class="w3-bar-item w3-button w3-white">Gallery</a>
+    <a href="index.html" class="w3-bar-item w3-button">Other Projects</a>
   </div>
 
   <div class="w3-content w3-padding" style="max-width:1000px">
@@ -38,39 +39,75 @@
     </div>
 
     <!-- Slideshow Section -->
-    <div class="w3-container w3-margin-bottom">
-      <h3><i class="fa fa-slideshow"></i> Slideshow</h3>
-      <div class="w3-content w3-display-container" style="max-width:800px">
-
-        <!-- 🟩 Replace these images with your own -->
-        <img class="mySlides" src="Beach.jpg" style="width:100%">
-        <img class="mySlides" src="bridge.jpg" style="width:100%">
-        <img class="mySlides" src="cold.jpg" style="width:100%">
-        <img class="mySlides" src="red.jpg" style="width:100%">
-        <img class="mySlides" src="sky.jpg" style="width:100%">
-
-        <!-- Slideshow controls -->
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-      </div>
+    <div class="w3-center w3-green"><h1>Places in Lindbergh Highschool</h1>
     </div>
-
-    <!-- Static Image Gallery -->
-    <div class="w3-row-padding w3-margin-top">
-      <div class="w3-third w3-margin-bottom">
-        <img src="images/gallery1.jpg" alt="Gallery 1" class="gallery-img w3-card-2">
+</div>
+<!-- set up each image, the coding will be the same but different images-->
+<div class="w3-content w3-display-container" style="max-width:500px">
+  <!--Start of image-->  
+  <div class="w3-display-container mySlides w3-text-blue w3-xlarge">
+        <img src="Places/Beach.jpg" alt="beach" style="width:100%"> 
+        <div class="w3-display-bottommiddle w3-large w3-container w3-padding-12 w3-black">
+          <h3>The Beach</h3>
+        </div>
+    </div>  
+    <!--End of image, repeat-->
+    <div class="w3-display-container mySlides w3-text-blue w3-xlarge">
+      <img src="Places/bridge.jpg" alt="bridge" style="width:100%"> 
+      <div class="w3-display-bottommiddle w3-large w3-container w3-padding-12 w3-black">
+        <h3>The Bridge</h3>
       </div>
-      <div class="w3-third w3-margin-bottom">
-        <img src="images/gallery2.jpg" alt="Gallery 2" class="gallery-img w3-card-2">
-      </div>
-      <div class="w3-third w3-margin-bottom">
-        <img src="images/gallery3.jpg" alt="Gallery 3" class="gallery-img w3-card-2">
-      </div>
+  </div>
+  <div class="w3-display-container mySlides w3-text-blue w3-xlarge">
+    <img src="Places/cold.jpg" alt="arctic" style="width:100%"> 
+    <div class="w3-display-bottommiddle w3-large w3-container w3-padding-12 w3-black">
+      <h3>The Arctic</h3>
     </div>
+</div>
+<div class="w3-display-container mySlides w3-text-blue w3-xlarge">
+  <img src="Places/red.jpg" alt="sky" style="width:100%"> 
+  <div class="w3-display-bottommiddle w3-large w3-container w3-padding-12 w3-black">
+    <h3>Blood Sky</h3>
+  </div>
+</div>
+<div class="w3-display-container mySlides w3-text-blue w3-xlarge">
+  <img src="Places/sky.jpg" alt="aurora" style="width:100%"> 
+  <div class="w3-display-bottommiddle w3-large w3-container w3-padding-12 w3-black">
+    <h3>Aurora Borealis</h3>
+  </div>
+</div>
+
+
+
+<!-- do not change this, these are your buttons for navigating through images-->
+ 
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<!-- DO NOT CHANGE ANYTHING BELOW THIS LINE-->
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 
     <!-- Optional Caption -->
     <div class="w3-container w3-center w3-padding-16">
-      <p>[Optional: Caption or description of your gallery content]</p>
+      <p>With our help you can see these sights in person!</p>
     </div>
   </div>
 
@@ -78,27 +115,6 @@
   <footer class="w3-center w3-padding-16">
     <p>© 2025 WanderWise Travel Guide</p>
   </footer>
-
-  <!-- Slideshow Script -->
-  <script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
-
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
-
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      if (n > x.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      x[slideIndex-1].style.display = "block";
-    }
-  </script>
 
 </body>
 </html>
